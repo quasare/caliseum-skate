@@ -1,0 +1,32 @@
+{
+  "site": {
+    "title": "Coliseum Skate",
+    "description": "Building community and confidence through skateboarding"
+  },
+  "credentials": {
+    "web3forms": {
+      "key": "PUBLIC_WEB3FORMS_ACCESS_KEY",
+      "location": ".env file",
+      "usage": "src/features/contact/Contact.tsx",
+      "getFrom": "https://web3forms.com/"
+    },
+    "stripe": {
+      "paymentLink": "PUBLIC_STRIPE_PAYMENT_LINK",
+      "location": ".env file",
+      "usage": "src/features/donation/Donation.tsx",
+      "getFrom": "Stripe Dashboard - create payment link"
+    },
+    "email": {
+      "contactEmail": "PUBLIC_CONTACT_EMAIL",
+      "location": ".env file",
+      "usage": "General contact information"
+    }
+  },
+  "placeholders": {
+    "logo": "Text: 'COLISEUM SKATE' in header",
+    "images": "Gray boxes with emoji/text in About section",
+    "contactInfo": "Update in src/features/contact/Contact.tsx",
+    "socialLinks": "Update in src/features/footer/Footer.tsx"
+  }
+}
+
