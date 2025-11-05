@@ -14,12 +14,12 @@ import Footer from '../features/footer/Footer';
     <title>Coliseum Skate</title>
   </head>
   <body class="antialiased">
-    <Header client:load />
+    <Header client:only="react" />
     <main>
-      <Hero client:visible />
-      <Contact client:load />
+      <Hero />
+      <Contact client:only="react" />
     </main>
-    <Footer client:visible />
+    <Footer />
   </body>
 </html>
 
