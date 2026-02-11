@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import DonateModal from '../donate-modal/DonateModal';
 import Navigation from '../navigation/Navigation';
 import MobileMenu from '../navigation/MobileMenu';

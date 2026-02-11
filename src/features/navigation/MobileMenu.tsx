@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import sharedContent from '../../content/shared.json';
 
 interface MobileMenuProps {

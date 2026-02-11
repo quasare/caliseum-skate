@@ -1,4 +1,3 @@
-import React from 'react';
 import sharedContent from '../../content/shared.json';
 
 interface NavigationProps {

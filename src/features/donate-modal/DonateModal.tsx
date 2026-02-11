@@ -1,4 +1,3 @@
-import React from 'react';
 import content from '../../content.json';
 
 const STRIPE_LINK = import.meta.env.PUBLIC_STRIPE_PAYMENT_LINK || '#';
