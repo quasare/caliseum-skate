@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "title": "Shop",
+    "subtitle": "Books, apparel, prints, and more"
+  },
+  "notice": "Full e-commerce integration coming soon. Contact us to purchase.",
+  "categories": ["All", "Books", "Apparel", "Prints", "Accessories"],
+  "products": [
+    {
+      "id": "book-concrete-canvas",
+      "name": "Concrete Canvas Book",
+      "category": "Books",
+      "price": 45.00,
+      "image": "/shop/book-concrete-canvas.jpg",
+      "description": "A beautiful hardcover book featuring stunning photography of skate spots around the world.",
+      "availability": "In Stock"
+    },
+    {
+      "id": "tshirt-coliseum",
+      "name": "Coliseum Skate T-Shirt",
+      "category": "Apparel",
+      "price": 30.00,
+      "image": "/shop/tshirt-coliseum.jpg",
+      "description": "Premium cotton t-shirt with Coliseum Skate logo.",
+      "availability": "In Stock"
+    },
+    {
+      "id": "print-venice",
+      "name": "Venice Beach Print",
+      "category": "Prints",
+      "price": 60.00,
+      "image": "/shop/print-venice.jpg",
+      "description": "Limited edition 18x24 print from our Streets of LA series.",
+      "availability": "Limited"
+    },
+    {
+      "id": "hat-coliseum",
+      "name": "Coliseum Snapback",
+      "category": "Accessories",
+      "price": 35.00,
+      "image": "/shop/hat-coliseum.jpg",
+      "description": "Classic snapback hat with embroidered logo.",
+      "availability": "In Stock"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "title": "Projects",
+    "subtitle": "Our documentaries, books, exhibitions, and more"
+  },
+  "categories": ["All", "Documentaries", "Books", "Exhibitions", "Photography", "Video"],
+  "projects": [
+    {
+      "id": "streets-la",
+      "title": "Streets of LA",
+      "category": "Documentaries",
+      "description": "A documentary exploring the vibrant skateboarding culture of Los Angeles, from Venice Beach to downtown.",
+      "thumbnail": "/projects/streets-la-thumb.jpg",
+      "images": ["/projects/streets-la-1.jpg", "/projects/streets-la-2.jpg"],
+      "year": 2023,
+      "videoUrl": "https://vimeo.com/example",
+      "credits": {
+        "director": "John Tracy",
+        "cinematographer": "Jane Doe"
+      }
+    },
+    {
+      "id": "concrete-canvas",
+      "title": "Concrete Canvas",
+      "category": "Books",
+      "description": "A photographic journey through iconic skate spots around the world.",
+      "thumbnail": "/projects/concrete-canvas-thumb.jpg",
+      "images": ["/projects/concrete-canvas-1.jpg"],
+      "year": 2022,
+      "credits": {
+        "photographer": "John Tracy",
+        "editor": "Sarah Smith"
+      }
+    },
+    {
+      "id": "urban-expression",
+      "title": "Urban Expression",
+      "category": "Exhibitions",
+      "description": "An exhibition showcasing the art and culture of skateboarding through photography and video.",
+      "thumbnail": "/projects/urban-expression-thumb.jpg",
+      "images": ["/projects/urban-expression-1.jpg", "/projects/urban-expression-2.jpg"],
+      "year": 2023,
+      "location": "Los Angeles"
+    }
+  ]
+}

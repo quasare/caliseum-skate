@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "title": "Gallery & Archive",
+    "subtitle": "A visual journey through skateboarding history"
+  },
+  "timeline": [
+    {
+      "year": "2023",
+      "title": "Venice Beach Sessions",
+      "description": "Documenting the vibrant skate culture at Venice Beach skatepark.",
+      "photos": ["/gallery/2023-1.jpg", "/gallery/2023-2.jpg", "/gallery/2023-3.jpg"]
+    },
+    {
+      "year": "2022",
+      "title": "Downtown LA",
+      "description": "Street skating in the heart of Los Angeles.",
+      "photos": ["/gallery/2022-1.jpg", "/gallery/2022-2.jpg"]
+    },
+    {
+      "year": "2021",
+      "title": "Skatepark Chronicles",
+      "description": "A year spent documenting skateparks across California.",
+      "photos": ["/gallery/2021-1.jpg", "/gallery/2021-2.jpg", "/gallery/2021-3.jpg"]
+    }
+  ],
+  "photos": [
+    {
+      "id": "1",
+      "url": "/gallery/photo-1.jpg",
+      "thumbnail": "/gallery/photo-1-thumb.jpg",
+      "caption": "Sunset session at Venice Beach",
+      "year": 2023,
+      "location": "Venice Beach, CA"
+    },
+    {
+      "id": "2",
+      "url": "/gallery/photo-2.jpg",
+      "thumbnail": "/gallery/photo-2-thumb.jpg",
+      "caption": "Street skating downtown",
+      "year": 2022,
+      "location": "Downtown LA"
+    },
+    {
+      "id": "3",
+      "url": "/gallery/photo-3.jpg",
+      "thumbnail": "/gallery/photo-3-thumb.jpg",
+      "caption": "Perfect kickflip",
+      "year": 2023,
+      "location": "Venice Beach, CA"
+    }
+  ]
+}

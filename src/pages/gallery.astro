@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../features/hero/Hero';
+import content from '../content/gallery.json';
+---
+
+<BaseLayout
+  title="Gallery - Coliseum Skate"
+  description="Photo archive and visual journey through skateboarding history"
+  currentPath="/gallery"
+>
+  <Hero {...content.hero} />
+
+  {/* Timeline Navigation */}
+  <section class="py-8 px-4 sm:px-6 bg-light border-b border-gray-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex gap-6 overflow-x-auto pb-2">
+        {content.timeline.map((item) => (
+          <button class="flex-shrink-0 px-6 py-3 rounded-lg bg-white border-2 border-gray-300 hover:border-primary transition-colors">
+            <span class="block text-2xl font-bold text-dark">{item.year}</span>
+            <span class="block text-xs text-gray-600 mt-1">{item.title}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Timeline Sections */}
+  {content.timeline.map((item) => (
+    <section class="py-16 sm:py-20 px-4 sm:px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+          <h2 class="text-3xl sm:text-4xl font-bold text-dark mb-2">{item.year} - {item.title}</h2>
+          <p class="text-lg text-gray-600">{item.description}</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {item.photos.map((photo, index) => (
+            <div class="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer group">
+              <img
+                src={photo}
+                alt={`${item.title} - Photo ${index + 1}`}
+                class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  {/* All Photos Gallery */}
+  <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-light">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-dark text-center mb-12">All Photos</h2>
+      <div class="columns-1 sm:columns-2 lg:columns-3 gap-4">
+        {content.photos.map((photo) => (
+          <div class="relative mb-4 break-inside-avoid">
+            <img
+              src={photo.thumbnail}
+              alt={photo.caption}
+              class="w-full rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer"
+              loading="lazy"
+            />
+            <div class="mt-2">
+              <p class="text-sm text-gray-600">{photo.caption}</p>
+              <p class="text-xs text-gray-500">{photo.location} • {photo.year}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

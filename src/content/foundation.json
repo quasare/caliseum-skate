@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "title": "Foundation & Impact",
+    "subtitle": "Making skateboarding accessible to all"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "The Coliseum Skate Foundation provides skateboarding programs, equipment, and opportunities to underserved youth communities."
+  },
+  "programs": [
+    {
+      "title": "Youth Skateboarding Program",
+      "description": "Free skateboarding lessons and mentorship for youth ages 8-18.",
+      "image": "/foundation/youth-program.jpg",
+      "status": "Active"
+    },
+    {
+      "title": "Board Donation Program",
+      "description": "Providing skateboards and safety equipment to kids who need them.",
+      "image": "/foundation/board-donation.jpg",
+      "status": "Active"
+    },
+    {
+      "title": "Community Skatepark Initiative",
+      "description": "Working with communities to build and maintain skateparks.",
+      "image": "/foundation/skatepark-initiative.jpg",
+      "status": "In Development"
+    }
+  ],
+  "events": [
+    {
+      "title": "Community Skate Day",
+      "date": "2024-05-20",
+      "location": "Venice Beach Skatepark",
+      "description": "Free community event with demos, lessons, and giveaways."
+    },
+    {
+      "title": "Annual Fundraiser",
+      "date": "2024-08-15",
+      "location": "Los Angeles",
+      "description": "Annual fundraising event to support our youth programs."
+    },
+    {
+      "title": "Skate Clinic Series",
+      "date": "Every Saturday",
+      "location": "Various Locations",
+      "description": "Free weekly skateboarding clinics for all skill levels."
+    }
+  ],
+  "impact": {
+    "stats": [
+      {
+        "number": "500+",
+        "label": "Youth Served"
+      },
+      {
+        "number": "150",
+        "label": "Boards Donated"
+      },
+      {
+        "number": "25",
+        "label": "Events Hosted"
+      },
+      {
+        "number": "10",
+        "label": "Communities Reached"
+      }
+    ]
+  },
+  "partners": [
+    {
+      "name": "Local Skate Shop",
+      "logo": "/foundation/partner-1.jpg"
+    },
+    {
+      "name": "Youth Community Center",
+      "logo": "/foundation/partner-2.jpg"
+    }
+  ]
+}

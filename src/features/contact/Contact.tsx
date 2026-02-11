@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import content from '../../content.json';
 
 const WEB3FORMS_KEY = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY || '';
 
@@ -45,8 +46,8 @@ export default function Contact() {
   return (
     <section id="contact" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-light">
       <div className="max-w-lg mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-dark mb-2">Contact Us</h2>
-        <p className="text-gray-600 mb-8 sm:mb-12 text-base sm:text-lg">Drop us a line!</p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-dark mb-2">{content.contact.title}</h2>
+        <p className="text-gray-600 mb-8 sm:mb-12 text-base sm:text-lg">{content.contact.subtitle}</p>
         
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <input

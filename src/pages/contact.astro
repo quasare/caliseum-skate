@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../features/hero/Hero';
+import Contact from '../features/contact/Contact';
+import content from '../content/contact.json';
+---
+
+<BaseLayout
+  title="Contact - Coliseum Skate"
+  description="Get in touch with Coliseum Skate for inquiries, bookings, and collaborations"
+  currentPath="/contact"
+>
+  <Hero {...content.hero} />
+
+  <div class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+      {/* Contact Form */}
+      <div class="lg:col-span-2">
+        <Contact client:only="react" />
+      </div>
+
+      {/* Contact Info Sidebar */}
+      <div class="lg:col-span-1">
+        <div class="bg-light p-8 rounded-lg shadow-md sticky top-24">
+          <h3 class="text-2xl font-bold text-dark mb-6">Contact Information</h3>
+
+          <div class="space-y-6">
+            <div>
+              <h4 class="font-semibold text-dark mb-2">Email</h4>
+              <a href={`mailto:${content.contactInfo.email}`} class="text-primary hover:underline">
+                {content.contactInfo.email}
+              </a>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-dark mb-2">Phone</h4>
+              <a href={`tel:${content.contactInfo.phone}`} class="text-primary hover:underline">
+                {content.contactInfo.phone}
+              </a>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-dark mb-2">Location</h4>
+              <p class="text-gray-600">{content.contactInfo.address}</p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-dark mb-4">Follow Us</h4>
+              <div class="flex flex-col gap-3">
+                <a
+                  href={content.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-dark hover:text-primary transition-colors"
+                >
+                  Instagram
+                </a>
+                <a
+                  href={content.social.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-dark hover:text-primary transition-colors"
+                >
+                  Twitter
+                </a>
+                <a
+                  href={content.social.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-dark hover:text-primary transition-colors"
+                >
+                  YouTube
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Inquiry Types Section */}
+  <section class="py-16 px-4 sm:px-6 bg-light border-t border-gray-200">
+    <div class="max-w-5xl mx-auto">
+      <h3 class="text-2xl font-bold text-dark text-center mb-8">What Can We Help You With?</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        {content.inquiryTypes.map((type) => (
+          <div class="bg-white p-4 rounded-lg shadow-sm text-center hover:shadow-md transition-shadow">
+            <p class="text-sm font-medium text-dark">{type}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

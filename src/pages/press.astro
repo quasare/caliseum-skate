@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../features/hero/Hero';
+import content from '../content/press.json';
+---
+
+<BaseLayout
+  title="Press - Coliseum Skate"
+  description="Press kit, articles, interviews, and awards"
+  currentPath="/press"
+>
+  <Hero {...content.hero} />
+
+  {/* Press Kit Download Section */}
+  <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-primary text-light">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">{content.pressKit.title}</h2>
+      <p class="text-lg mb-8 opacity-90">{content.pressKit.description}</p>
+      <a
+        href={content.pressKit.downloadUrl}
+        download
+        class="inline-block bg-light text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-white transition-colors"
+      >
+        Download Press Kit
+      </a>
+    </div>
+  </section>
+
+  {/* Articles Section */}
+  <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-dark mb-12">Press Coverage</h2>
+      <div class="space-y-8">
+        {content.articles.map((article) => (
+          <article class="border-l-4 border-primary pl-6 py-4">
+            <a
+              href={article.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group"
+            >
+              <h3 class="text-2xl font-bold text-dark group-hover:text-primary transition-colors mb-2">
+                {article.title}
+              </h3>
+              <div class="flex gap-4 text-sm text-gray-600 mb-3">
+                <span class="font-semibold">{article.publication}</span>
+                <span>•</span>
+                <time>{new Date(article.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+              </div>
+              <p class="text-gray-600 italic">{article.excerpt}</p>
+              <span class="inline-block mt-3 text-primary font-semibold group-hover:underline">
+                Read Article →
+              </span>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Awards Section */}
+  <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-light">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-dark text-center mb-12">Awards & Recognition</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {content.awards.map((award) => (
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-4xl mb-4">🏆</div>
+            <h3 class="text-xl font-bold text-dark mb-2">{award.title}</h3>
+            <p class="text-gray-600 mb-1">{award.organization}</p>
+            <p class="text-primary font-semibold">{award.year}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

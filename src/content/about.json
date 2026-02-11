@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "title": "About Coliseum Skate",
+    "subtitle": "Preserving and celebrating skateboarding culture"
+  },
+  "brandStory": {
+    "title": "Our Story",
+    "paragraphs": [
+      "Coliseum Skate was founded with a simple mission: to document and preserve the rich culture of skateboarding for future generations.",
+      "Through our documentaries, photography, and publications, we capture the authentic spirit of skateboarding - the creativity, the community, and the passion that drives skaters worldwide."
+    ],
+    "image": "/about/story.jpg"
+  },
+  "founder": {
+    "name": "John Tracy",
+    "title": "Founder & Creative Director",
+    "bio": "John Tracy has been documenting skateboarding culture for over two decades. His work has been featured in major publications and film festivals around the world.",
+    "photo": "/about/founder.jpg",
+    "socialLinks": {
+      "instagram": "https://instagram.com/coliseumskate",
+      "twitter": "https://twitter.com/coliseumskate"
+    }
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "To document, preserve, and celebrate skateboarding culture through compelling visual storytelling that inspires and educates."
+  },
+  "values": [
+    {
+      "title": "Authenticity",
+      "description": "We capture skateboarding culture as it truly is, without filters or pretense",
+      "icon": "🎬"
+    },
+    {
+      "title": "Community",
+      "description": "We believe in the power of skateboarding to bring people together",
+      "icon": "🤝"
+    },
+    {
+      "title": "Creativity",
+      "description": "We celebrate the artistic expression that defines skateboarding",
+      "icon": "🎨"
+    },
+    {
+      "title": "Legacy",
+      "description": "We preserve skateboarding history for future generations",
+      "icon": "📚"
+    }
+  ]
+}

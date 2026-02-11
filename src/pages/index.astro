@@ -1,25 +1,26 @@
 ---
-import Header from '../features/header/Header';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../features/hero/Hero';
 import Contact from '../features/contact/Contact';
-import Footer from '../features/footer/Footer';
+import content from '../content/home.json';
 ---
 
-<!doctype html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Coliseum Skate - Skate Your Way to Fun!" />
-    <title>Coliseum Skate</title>
-  </head>
-  <body class="antialiased">
-    <Header client:only="react" />
-    <main>
-      <Hero />
-      <Contact client:only="react" />
-    </main>
-    <Footer />
-  </body>
-</html>
+<BaseLayout
+  title="Coliseum Skate - Home"
+  description="Documenting skateboarding culture through film, photography, and storytelling"
+  currentPath="/"
+>
+  <Hero {...content.hero} />
+
+  <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-light">
+    <div className="max-w-7xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold text-dark mb-4">{content.featured.title}</h2>
+        <p className="text-lg text-gray-600">{content.featured.subtitle}</p>
+      </div>
+    </div>
+  </section>
+
+  <Contact client:only="react" />
+</BaseLayout>
 

@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "title": "Get In Touch",
+    "subtitle": "Inquiries, bookings, and collaborations"
+  },
+  "form": {
+    "title": "Contact Us",
+    "subtitle": "Drop us a line!",
+    "submitText": "Send Message"
+  },
+  "inquiryTypes": [
+    "General Inquiry",
+    "Booking/Events",
+    "Press/Media",
+    "Collaboration",
+    "Shop Purchase"
+  ],
+  "contactInfo": {
+    "email": "info@coliseumskate.com",
+    "phone": "(555) 123-4567",
+    "address": "Venice Beach, CA"
+  },
+  "social": {
+    "instagram": "https://instagram.com/coliseumskate",
+    "twitter": "https://twitter.com/coliseumskate",
+    "youtube": "https://youtube.com/coliseumskate"
+  }
+}

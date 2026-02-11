@@ -1,4 +1,5 @@
 import React from 'react';
+import content from '../../content.json';
 
 const STRIPE_LINK = import.meta.env.PUBLIC_STRIPE_PAYMENT_LINK || '#';
 
@@ -27,10 +28,10 @@ export default function DonateModal({ isOpen, onClose }: DonateModalProps) {
         </button>
         
         <h2 className="text-2xl sm:text-3xl font-bold text-dark mb-4">
-          Support Coliseum Skate
+          {content.donation.title}
         </h2>
         <p className="text-gray-600 mb-8 leading-relaxed">
-          Your donation helps us provide skateboarding programs and equipment to youth in our community.
+          {content.donation.description}
         </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">

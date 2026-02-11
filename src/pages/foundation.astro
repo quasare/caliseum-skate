@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../features/hero/Hero';
+import content from '../content/foundation.json';
+---
+
+<BaseLayout
+  title="Foundation - Coliseum Skate"
+  description="Making skateboarding accessible to all through community programs and support"
+  currentPath="/foundation"
+>
+  <Hero {...content.hero} />
+
+  {/* Mission Section */}
+  <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-dark mb-6">{content.mission.title}</h2>
+      <p class="text-xl text-gray-600">{content.mission.description}</p>
+    </div>
+  </section>
+
+  {/* Impact Stats */}
+  <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-dark text-light">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Our Impact</h2>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        {content.impact.stats.map((stat) => (
+          <div class="text-center">
+            <div class="text-5xl sm:text-6xl font-bold text-primary mb-2">{stat.number}</div>
+            <div class="text-lg sm:text-xl opacity-90">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Programs Section */}
+  <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-dark text-center mb-12">Our Programs</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {content.programs.map((program) => (
+          <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden">
+            <img
+              src={program.image}
+              alt={program.title}
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold text-dark">{program.title}</h3>
+                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full font-semibold">
+                  {program.status}
+                </span>
+              </div>
+              <p class="text-gray-600">{program.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Events Section */}
+  <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-light">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-dark text-center mb-12">Upcoming Events</h2>
+      <div class="space-y-6">
+        {content.events.map((event) => (
+          <div class="bg-white p-6 rounded-lg shadow-md flex flex-col sm:flex-row gap-6">
+            <div class="flex-shrink-0 text-center sm:text-left">
+              <div class="inline-block bg-primary text-light rounded-lg p-4">
+                <div class="text-3xl font-bold">{new Date(event.date).toLocaleDateString('en-US', { day: 'numeric' })}</div>
+                <div class="text-sm uppercase">{new Date(event.date).toLocaleDateString('en-US', { month: 'short' })}</div>
+              </div>
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-2xl font-bold text-dark mb-2">{event.title}</h3>
+              <p class="text-gray-600 mb-2">{event.description}</p>
+              <div class="flex gap-4 text-sm text-gray-500">
+                <span>📍 {event.location}</span>
+                <span>📅 {event.date}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Call to Action */}
+  <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-dark text-light">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-6">Support Our Mission</h2>
+      <p class="text-xl mb-8 opacity-90">Your donation helps us provide skateboarding programs and equipment to youth in our community.</p>
+      <button
+        class="bg-primary text-light px-8 py-4 rounded-lg font-bold text-lg hover:bg-light hover:text-primary transition-colors"
+        onclick="document.querySelector('header button').click()"
+      >
+        Donate Now
+      </button>
+    </div>
+  </section>
+</BaseLayout>

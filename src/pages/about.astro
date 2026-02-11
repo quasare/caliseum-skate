@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../features/hero/Hero';
+import content from '../content/about.json';
+---
+
+<BaseLayout
+  title="About - Coliseum Skate"
+  description="Learn about Coliseum Skate and our mission to document and preserve skateboarding culture"
+  currentPath="/about"
+>
+  <Hero {...content.hero} />
+
+  {/* Brand Story Section */}
+  <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-dark mb-6">{content.brandStory.title}</h2>
+          {content.brandStory.paragraphs.map((paragraph) => (
+            <p class="text-lg text-gray-600 mb-4">{paragraph}</p>
+          ))}
+        </div>
+        <div>
+          <img
+            src={content.brandStory.image}
+            alt="Our Story"
+            class="rounded-lg shadow-lg w-full"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Founder Section */}
+  <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-light">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-1">
+          <img
+            src={content.founder.photo}
+            alt={content.founder.name}
+            class="rounded-lg shadow-lg w-full"
+          />
+        </div>
+        <div class="md:col-span-2">
+          <h2 class="text-3xl font-bold text-dark mb-2">{content.founder.name}</h2>
+          <p class="text-xl text-primary mb-4">{content.founder.title}</p>
+          <p class="text-lg text-gray-600 mb-6">{content.founder.bio}</p>
+          <div class="flex gap-4">
+            <a
+              href={content.founder.socialLinks.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-dark hover:text-primary transition-colors"
+            >
+              Instagram
+            </a>
+            <a
+              href={content.founder.socialLinks.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-dark hover:text-primary transition-colors"
+            >
+              Twitter
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Mission Section */}
+  <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-dark mb-6">{content.mission.title}</h2>
+      <p class="text-xl text-gray-600">{content.mission.description}</p>
+    </div>
+  </section>
+
+  {/* Values Section */}
+  <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-light">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-dark text-center mb-12">Our Values</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {content.values.map((value) => (
+          <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <div class="text-5xl mb-4">{value.icon}</div>
+            <h3 class="text-xl font-bold text-dark mb-3">{value.title}</h3>
+            <p class="text-gray-600">{value.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

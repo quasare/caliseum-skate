@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "title": "Press & Media",
+    "subtitle": "Press kit, articles, interviews, and awards"
+  },
+  "pressKit": {
+    "title": "Download Press Kit",
+    "description": "High-resolution logos, photos, and brand assets for media use.",
+    "downloadUrl": "/press/press-kit.zip"
+  },
+  "articles": [
+    {
+      "title": "Coliseum Skate Documentary Featured at Sundance",
+      "publication": "Skateboard Magazine",
+      "date": "2023-06-15",
+      "url": "https://example.com/article-1",
+      "excerpt": "John Tracy's latest documentary captures the raw energy of LA's skate scene."
+    },
+    {
+      "title": "Preserving Skateboarding Culture Through Film",
+      "publication": "The Skateboarding Times",
+      "date": "2023-03-20",
+      "url": "https://example.com/article-2",
+      "excerpt": "An interview with John Tracy about his mission to document skateboarding."
+    },
+    {
+      "title": "Streets of LA: A Must-Watch Documentary",
+      "publication": "Film Review Weekly",
+      "date": "2023-01-10",
+      "url": "https://example.com/article-3",
+      "excerpt": "A compelling look at the skateboarding culture that defines Los Angeles."
+    }
+  ],
+  "awards": [
+    {
+      "title": "Best Documentary",
+      "organization": "Independent Film Festival",
+      "year": 2023
+    },
+    {
+      "title": "Audience Choice Award",
+      "organization": "Skateboarding Film Fest",
+      "year": 2023
+    },
+    {
+      "title": "Best Cinematography",
+      "organization": "Action Sports Film Awards",
+      "year": 2022
+    }
+  ],
+  "interviews": [
+    {
+      "title": "The Art of Skateboarding Documentation",
+      "platform": "Podcast - Skate Stories",
+      "date": "2023-05-01",
+      "url": "https://example.com/podcast"
+    }
+  ]
+}

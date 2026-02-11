@@ -1,0 +1,25 @@
+{
+  "site": {
+    "name": "Coliseum Skate",
+    "tagline": "Documenting the Culture of Skateboarding",
+    "logo": "/logo.jpeg"
+  },
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "About", "href": "/about" },
+    { "label": "Projects", "href": "/projects" },
+    { "label": "Shop", "href": "/shop" },
+    { "label": "Gallery", "href": "/gallery" },
+    { "label": "Press", "href": "/press" },
+    { "label": "Foundation", "href": "/foundation" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "donation": {
+    "title": "Support Coliseum Skate",
+    "description": "Your donation helps us provide skateboarding programs and equipment to youth in our community.",
+    "amounts": [25, 50, 100]
+  },
+  "footer": {
+    "copyright": "Coliseum Skate"
+  }
+}

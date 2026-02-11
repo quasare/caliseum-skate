@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "Skate Your Way to Fun!",
+    "subtitle": "Documenting skateboarding culture through film, photography, and storytelling",
+    "backgroundImage": "/skateboard_hero.jpg"
+  },
+  "featured": {
+    "title": "Featured Projects",
+    "subtitle": "Explore our latest documentaries, books, and exhibitions",
+    "projects": [
+      {
+        "id": "documentary-1",
+        "title": "Streets of LA",
+        "description": "A documentary exploring the vibrant skateboarding culture of Los Angeles",
+        "image": "/projects/streets-la.jpg",
+        "type": "Documentary",
+        "href": "/projects#streets-la"
+      },
+      {
+        "id": "book-1",
+        "title": "Concrete Canvas",
+        "description": "A photographic journey through iconic skate spots",
+        "image": "/projects/concrete-canvas.jpg",
+        "type": "Book",
+        "href": "/projects#concrete-canvas"
+      },
+      {
+        "id": "exhibition-1",
+        "title": "Urban Expression",
+        "description": "An exhibition showcasing the art and culture of skateboarding",
+        "image": "/projects/urban-expression.jpg",
+        "type": "Exhibition",
+        "href": "/projects#urban-expression"
+      }
+    ]
+  },
+  "callToAction": {
+    "title": "Support Our Mission",
+    "description": "Help us preserve and celebrate skateboarding culture for future generations",
+    "buttonText": "Donate Now",
+    "secondaryButtonText": "Learn More",
+    "secondaryButtonHref": "/foundation"
+  }
+}

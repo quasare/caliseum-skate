@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../features/hero/Hero';
+import content from '../content/projects.json';
+---
+
+<BaseLayout
+  title="Projects - Coliseum Skate"
+  description="Explore our documentaries, books, exhibitions, photography, and video projects"
+  currentPath="/projects"
+>
+  <Hero {...content.hero} />
+
+  {/* Categories Section */}
+  <section class="py-8 px-4 sm:px-6 bg-light sticky top-[72px] z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-wrap gap-3 justify-center">
+        {content.categories.map((category) => (
+          <button class="px-4 py-2 rounded-lg bg-white border-2 border-gray-300 text-dark font-medium hover:border-primary hover:text-primary transition-colors">
+            {category}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Projects Grid */}
+  <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {content.projects.map((project) => (
+          <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden group">
+            <div class="relative overflow-hidden">
+              <img
+                src={project.thumbnail}
+                alt={project.title}
+                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <span class="absolute top-4 left-4 bg-primary text-light px-3 py-1 rounded-full text-sm font-semibold">
+                {project.category}
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-2xl font-bold text-dark">{project.title}</h3>
+                <span class="text-gray-500 text-sm">{project.year}</span>
+              </div>
+              <p class="text-gray-600 mb-4">{project.description}</p>
+              <button class="text-primary hover:text-secondary font-semibold transition-colors">
+                View Details →
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
